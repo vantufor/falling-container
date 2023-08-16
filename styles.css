@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  .matrix-container {
+    font-family: 'Courier New', monospace;
+    color: #00FF00;
+    text-shadow: 0px 0px 2px #00FF00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .matrix-column {
+    display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+    white-space: nowrap;
+    animation: fall 1s linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(calc(100vh + 1px));
+    }
+  }
